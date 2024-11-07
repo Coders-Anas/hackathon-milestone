@@ -1,9 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* General styling*/
 body { 
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     margin: 0;
-    padding: 150px;
+    /* padding: 150px; */
 }
 
 .resume-container {
@@ -80,4 +84,10 @@ button {
 
 button:hover {
     background-color: #397ee6;
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        padding: 16px;
+    }
 }
