@@ -1,93 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* General styling*/
-body { 
-    font-family: 'Arial', sans-serif;
-    /* background-color: #f4f4f4; */
-    margin: 0;
-    /* padding: 150px; */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Josefin Sans", sans-serif;
 }
 
-.resume-container {
-    display: flex;
-    background-color: white;
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
 }
 
-/*left section styling*/
-.left-section {
-    background-color: #2c2c2c;
-    color: white;
-    padding: 20px;
-    width: 35%;
-    text-align: center;
-    border-right: 5px solid #397ee6;
-
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    margin-top: 10%;
-    border-radius: 50%;
-    border: 5px solid #397ee6;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 24px;
-    margin: 10px 0;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-h3 {
-    font-size: 18px;
-    padding: 2%;
-    margin: 20px 0 10px;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #397ee6;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-ul {
-    list-style-type: fill round;
-    padding: 10;
-    margin: 10px 0;
-}
-
-ul li {
-    margin: 5px 0;
-}
-
-/* Right Section Styling */
-.right-section {
-    padding: 20px;
-    width: 65%;
-}
-
-button {
-    font-family: Arial, sans-serif;
-    border-radius:10px;
-    box-shadow: 0 0 15px black;
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-button:hover {
-    background-color: #397ee6;
-}
-
-@media only screen and (max-width: 425px) {
-    body {
-        padding: 16px;
-    }
+section {
+    box-shadow: 8px 8px teal;
 }

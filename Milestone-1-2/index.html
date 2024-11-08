@@ -1,92 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Static Interactive Resume</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="p-4 md:p-16 lg:px-40">
-    <div class="resume-container">
-      <!-- Left Section-->
-      <div class="left-section">
-        <img
-          src="img/profile.jpeg"
-          alt="profile picture"
-          class="profile-picture"
-        />
 
-        <section id="objective">
-          <h3 style="color: white">Career Objective</h3>
-          <p style="text-align: justify; hyphens: auto">
-            Proficient in HTML, CSS, JavaScript, TypeScript, Next.js, React and
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static Interactive Resume</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="relative">
+  <img class="absolute w-full h-full object-cover -z-10 opacity-25" src="img/bg-pattern.png" alt="bg-image">
+
+  <div id="content-wrapper" class="p-4 mx-auto w-full max-w-[750px] flex flex-col justify-center">
+    <header
+      class="-z-0 relative rounded-xl border-2 border-black bg-gradient-to-l from-teal-500 to-teal-100 p-4 flex flex-col md:flex-row gap-3 justify-center items-center">
+      <img src="img/profile.jpeg" alt="profile picture" class="rounded-full w-32 md:w-40" />
+      <!-- <img class="absolute w-full h-full object-cover -z-10 opacity-25" src="img/bg-pattern.png" alt="bg-image"> -->
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl font-bold text-teal-900">Muhammad Anas</h1>
+        <h4 class="text-2xl font-semibold text-teal-900 opacity-80">Web Developer</h4>
+        <a href="mailto:anasashrafansari896@gmail.com">anasashrafansari896@gmail.com</a>
+        <p>+92 311 3393181</p>
+      </div>
+    </header>
+
+    <main class="py-6 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[750px]">
+      <div class="flex flex-col gap-6">
+        <section id="about-me" class="p-4 border-2 border-black rounded-xl">
+          <h2 class="text-2xl uppercase font-bold text-teal-900">About Me</h2>
+          <p>Proficient in HTML, CSS, JavaScript, TypeScript, Next.js, React and
             responsive design frameworks. Strong track record of delivering
-            high-quality websites and applications, optimizing user experiences,
-          </p>
+            high-quality websites and applications, optimizing user experiences.</p>
         </section>
 
-        <section id="certification">
-          <h3 style="color: white">Certification</h3>
-          <p><b>Html, Css, Javascript:</b>From Al Kareem Institute of It</p>
-          <p>
-            <b>Web3.0, Metaverse, Artificial Intelligence:</b>From: Governor
-            House Karachi
-          </p>
-        </section>
+        <!-- <section id="personal-info" class="p-4 border-2 border-black rounded-xl">
+          <h2 class="text-2xl uppercase font-bold">Contact</h2>
+          <div></div>
+        </section> -->
+
       </div>
 
-      <!--Right section-->
-      <div class="right-section">
-        <h1>Static Interactive Resume</h1>
-        <!--personal information-->
-        <section id="personal-info">
-          <h3>Personal Information</h3>
-          <p><b>Name:</b> Muhammad Anas Raza</p>
-          <p><b>Phone:</b> +923113393181</p>
-          <p>
-            <b>Email:</b>
-            <a href="mailto:anasashrafansari896@gmail.com"
-              >anasashrafansari896@gmail.com</a
-            >
-          </p>
-          <p>
-            <b>LinkedIn:</b>
-            <a
-              href="https://www.linkedin.com/in/anas-ansari-876354300"
-              target="_blank"
-              >www.Linkedin.com</a
-            >
-          </p>
-        </section>
+      <section id="experience" class="p-4 border-2 border-black rounded-xl">
+        <h2 class="text-2xl uppercase font-bold text-teal-900">Work Experience</h2>
+        <div>
+          <p class="text-xs font-light">Jan 2024 - July 2024</p>
+          <h4 class="text-base font-semibold">Front-End Developer</h4>
+          <p class="text-xs font-light">TIF Freelancing Institute</p>
+        </div>
+      </section>
 
-        <!--Education section-->
-        <section id="education">
-          <h3>Education</h3>
-          <p><b>Intermediate:</b> Medical From The City h/s School</p>
-          <p><b>Matriculation:</b> From The city h/s School</p>
-        </section>
-        <!--skills section-->
-        <section id="skills">
-          <h3>Skills</h3>
-          <ul>
-            <li>Html</li>
-            <li>Css</li>
-            <li>JavaScript</li>
-            <li>Typecript</li>
-            <li>Next.js</li>
-          </ul>
-        </section>
-        <!--Work Experience Section-->
-        <section id="work-experience">
-          <h3>Work Experience</h3>
-          <p><b>Company:</b> TIF freelancing Institute</p>
-          <p><b>Role:</b> Front-End Developer</p>
-        </section>
+      <section id="skills" class="p-4 border-2 border-black rounded-xl">
+        <h2 class="text-2xl uppercase font-bold text-teal-900">Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Web 3.0</li>
+          <li>Metaverse</li>
+          <li>Artificial Intelligence</li>
+        </ul>
+      </section>
 
-        <!--button-->
-        <button id="toggle-skills"><b>Hide/Show skills</b></button>
-      </div>
+
+
+      <section id="education" class="p-4 border-2 border-black rounded-xl">
+        <h2 class="text-2xl uppercase font-bold text-teal-900">Education</h2>
+        <div id="education-wrapper" class="flex flex-col gap-3">
+          <div>
+            <p class="text-xs font-light">Aug 2021 - Aug 2023</p>
+            <h4 class="text-base font-semibold">Intermediate (Pre-Med)</h4>
+            <p class="text-xs font-light">The City High School, Tando Adam</p>
+          </div>
+  
+          <div>
+            <p class="text-xs font-light">Mar 2019 - Aug 2021</p>
+            <h4 class="text-base font-semibold">Matriculation</h4>
+            <p class="text-xs font-light">The City High School, Tando Adam</p>
+          </div>  
+        </div>
+      </section>
+
+    </main>
+
+    <!--button-->
+    <div class="flex justify-center">
+      <button id="toggle-skills"
+        class="font-semibold shadow-lg shadow-teal-400 text-sm px-6 py-3 bg-teal-400 rounded-full border-2 border-black hover:border-black/40 transition-all">Hide/Show
+        skills</button>
     </div>
-    <script src="js/script.js"></script>
-  </body>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
