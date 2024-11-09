@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>Dynamic Resume Builder</h1>
-    <form id="resume-form">
-        <fieldset>
-            <legend>personal information</legend>
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
-              
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" placeholder="Enter your phone number" required>
-        </fieldset>
+<body class="relative">
+    <img class="absolute w-full h-full object-cover -z-10 opacity-25" src="img/bg-pattern.png" alt="bg-image">
 
-        <fieldset>
-            <legend>Education</legend>
-            <label for="education">Education:</label>
-            <textarea id="education" placeholder="Enter your education" rows="4" required></textarea>
-        </fieldset>
+    <div id="content-wrapper" class="relative py-6">
+        <h1 class="text-center text-4xl font-bold uppercase">Dynamic Resume Builder</h1>
+        <h4 class="text-center font-medium text-lg">Made by: Muhammad Anas</h4>
+        <form id="resume-form" class="my-6 p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+            <fieldset class="p-4 flex flex-col w-full h-full gap-2 border-2 border-black rounded-lg">
+                <legend class="text-lg font-semibold uppercase">personal information</legend>
+                <label for="name">Name:</label>
+                <input class="w-full input input-bordered" type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input class="w-full input input-bordered" type="email" id="email" placeholder="Enter your email"
+                    required>
+
+                <label for="phone">Phone:</label>
+                <input class="w-full input input-bordered" type="tel" id="phone" placeholder="Enter your phone number"
+                    required>
+            </fieldset>
+
+            <fieldset class="p-4 flex flex-col w-full h-full gap-2 border-2 border-black rounded-lg">
+                <legend class="text-lg font-semibold uppercase">Education</legend>
+                <label for="education">Education:</label>
+                <textarea class="textarea textarea-bordered" id="education" placeholder="Enter your education" rows="4"
+                    required></textarea>
+            </fieldset>
 
 
-        <fieldset>
-            <legend>Experience</legend>
-            <label for="experience">Experience:</label>
-            <textarea id="experience" placeholder="Enter your work experience" rows="4" required></textarea>
-        </fieldset>
+            <fieldset class="p-4 flex flex-col w-full h-full gap-2 border-2 border-black rounded-lg">
+                <legend class="text-lg font-semibold uppercase">Experience</legend>
+                <label for="experience">Experience:</label>
+                <textarea class="textarea textarea-bordered" id="experience" placeholder="Enter your work experience"
+                    rows="4" required></textarea>
+            </fieldset>
 
-        <fieldset>
-            <legend>Skills</legend>
-            <label for="skills">Skills:</label>
-            <textarea id="skills" placeholder="Enter your skills" rows="4" required></textarea>
-        </fieldset>
+            <fieldset class="p-4 flex flex-col w-full h-full gap-2 border-2 border-black rounded-lg">
+                <legend class="text-lg font-semibold uppercase">Skills</legend>
+                <label for="skills">Skills:</label>
+                <textarea class="textarea textarea-bordered" id="skills" placeholder="Enter your skills" rows="4"
+                    required></textarea>
+            </fieldset>
+        </form>
 
-        <button type="submit"><b>Generate Resume</b></button>
-    </form>
-    <br>
+        <div class="text-center">
+            <button type="submit"
+                class="btn rounded-full hover:bg-teal-700 border-none font-medium bg-teal-900 text-white shadow-lg shadow-teal-700">Generate
+                Resume</button>
+        </div>
+    </div>
 
     <!-- Dynamic Resume -->
-     <div id="resume-display">
+    <div id="resume-display">
         <!-- Resume will be generated below -->
-     </div>
+    </div>
 
-     <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
