@@ -1,43 +1,42 @@
-// Get References to the form and display area
+// Bind the submit event to the resume form
+$("#resume-form").on("submit", function (event: JQuery.SubmitEvent) {
+  event.preventDefault();
 
-const form = document.getElementById('resume-form') as HTMLFormElement;
-const resumeDisplayElement = document.getElementById('resume-display') as HTMLDivElement
+  // Serialize the form data and type it correctly as an array of name-value pairs
+  const formData: Array<JQuery.NameValuePair> = $(this).serializeArray();
 
-//Handle form submission
-form.addEventListener('submit', (event : Event) => {
-    event.preventDefault();// prevent page reload
+  // Clear the skills text before updating to prevent duplication
+  $("#user-skills").text("");
 
-    //collect input values
-    const name = (document.getElementById('name') as HTMLInputElement).value
-    const email = (document.getElementById('email') as HTMLInputElement).value
-    const phone = (document.getElementById('phone') as HTMLInputElement).value
-    const education = (document.getElementById('education') as HTMLInputElement).value
-    const experience = (document.getElementById('experience') as HTMLInputElement).value
-    const skills = (document.getElementById('skills') as HTMLInputElement).value
-
-    //Generate the resume content dynamically
-    const resumeHTML = `
-    <h2><b>Resume</b></h2>
-    <h3>Personal Information</h3>
-    <p><b>Name:</b>${name}</p>
-    <p><b>Email:</b>${email}</p>
-    <p><b>Phone:</b>${phone}</p>
-
-    <h3>Education</h3>
-    <p>${education}</p>
-
-    <h3>Experience</h3>
-    <p>${experience}</p>
-
-    <h3>Skills</h3>
-    <p>${skills}</p>
-    `;
-
-    //Display the generated resume
-    if(resumeDisplayElement){
-        resumeDisplayElement.innerHTML = resumeHTML;
+  // Iterate through form data and populate corresponding elements
+  formData.forEach((item: JQuery.NameValuePair) => {
+    if (item.name === "skill") {
+      // Concatenate skills as a comma-separated list
+      const currentSkills = $("#user-skills").text();
+      $("#user-skills").text(
+        currentSkills ? `${currentSkills}, ${item.value}` : item.value
+      );
+    } else if (item.name === "gender") {
+      // Update the user avatar based on gender
+      const avatarUrl =
+        item.value === "male"
+          ? "https://avatar.iran.liara.run/public/boy"
+          : "https://avatar.iran.liara.run/public/girl";
+      $("#userAvatar").attr("src", avatarUrl);
+    } else {
+      // Populate elements directly by ID matching form field name
+      $(`#${item.name}`).text(item.value);
     }
-    else {
-        console.error('The resume display element is missing.');
-    }
+  });
+
+  // Display the generated resume section
+  $("#content-wrapper").hide();
+  $("#generated-resume").show();
+});
+
+// Handle the print functionality with type safety
+$("#print").click((): void => {
+  window.print();
+  $("#content-wrapper").show();
+  $("#generated-resume").hide();
 });
