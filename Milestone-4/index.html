@@ -29,22 +29,22 @@
                     <div class="label">
                         <span class="label-text">Name:</span>
                     </div>
-                    <input name="name" type="text" placeholder="John Doe" class="text-sm input input-bordered w-full" />
+                    <input required name="name" type="text" placeholder="John Doe" class="text-sm input input-bordered w-full" />
                 </label>
                 <label class="form-control flex-grow">
                     <div class="label">
                         <span class="label-text">Phone Number:</span>
                     </div>
-                    <input name="phone" type="tel" placeholder="0312 34567890"
-                        class="text-sm input input-bordered w-full" />
+                    <input required name="phone" type="tel" placeholder="0312 34567890"
+                        class="text-sm input input-bordered w-full" required/>
                 </label>
 
                 <label class="form-control flex-grow">
                     <div class="label">
                         <span class="label-text">Email:</span>
                     </div>
-                    <input name="email" type="email" placeholder="Johndoe@email.com"
-                        class="text-sm input input-bordered w-full" />
+                    <input required name="email" type="email" placeholder="Johndoe@email.com"
+                        class="text-sm input input-bordered w-full" required/>
                 </label>
                 <!-- Gender -->
                 <div class="label">
@@ -52,19 +52,19 @@
                 </div>
                 <div class="form-control">
                     <label class="label cursor-pointer w-fit flex gap-3">
-                        <input value="male" type="radio" name="gender" class="radio radio-accent" checked="checked" />
+                        <input required value="male" type="radio" name="gender" class="radio radio-accent" checked="checked" />
                         <span class="label-text">Male</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="label cursor-pointer w-fit flex gap-3">
-                        <input value="female" type="radio" name="gender" class="radio radio-accent" />
+                        <input required value="female" type="radio" name="gender" class="radio radio-accent" />
                         <span class="label-text">Female</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="label cursor-pointer w-fit flex gap-3">
-                        <input value="other" type="radio" name="gender" class="radio radio-accent" />
+                        <input required value="other" type="radio" name="gender" class="radio radio-accent" />
                         <span class="label-text">Other</span>
                     </label>
                 </div>
@@ -73,7 +73,7 @@
                     <div class="label">
                         <span class="label-text">Job Title:</span>
                     </div>
-                    <input name="title" type="text" placeholder="Web Developer"
+                    <input required name="title" type="text" placeholder="Web Developer"
                         class="text-sm input input-bordered w-full" />
                 </label>
 
@@ -81,14 +81,14 @@
                     <div class="label">
                         <span class="label-text">About:</span>
                     </div>
-                    <input name="about" type="text"
+                    <input required name="about" type="text"
                         placeholder="Passionate full stack web developer with a goal to enhance user experience"
                         class="text-sm input input-bordered w-full" />
                 </label>
 
                 <div class="form-control w-fit">
                     <label class="label cursor-pointer gap-3">
-                        <input type="checkbox" checked="checked" class="checkbox checkbox-accent" />
+                        <input required type="checkbox" checked="checked" class="checkbox checkbox-accent" />
                         <span class="label-text">Use professional</span>
                     </label>
                 </div>
@@ -101,14 +101,14 @@
                     <div class="label">
                         <span class="label-text">Degree Title:</span>
                     </div>
-                    <input name="degreeTitle" type="text" placeholder="Bachelors of Science in Computer Science"
+                    <input required name="degreeTitle" type="text" placeholder="Bachelors of Science in Computer Science"
                         class="text-sm input input-bordered w-full" />
                 </label>
                 <label class="form-control">
                     <div class="label">
                         <span class="label-text">Degree Institution:</span>
                     </div>
-                    <input name="degreeInstitute" type="text" placeholder="XYZ Institute, New York, USA"
+                    <input required name="degreeInstitute" type="text" placeholder="XYZ Institute, New York, USA"
                         class="text-sm input input-bordered w-full" />
                 </label>
                 <div class="flex gap-2 w-full">
@@ -116,7 +116,7 @@
                         <div class="label">
                             <span class="label-text">Start Date:</span>
                         </div>
-                        <input name="degreeStart" type="date" placeholder="Type here"
+                        <input required name="degreeStart" type="date" placeholder="Type here"
                             class="text-sm input input-bordered w-full" />
                     </label>
 
@@ -124,7 +124,7 @@
                         <div class="label">
                             <span class="label-text">End Date:</span>
                         </div>
-                        <input name="degreeEnd" type="date" placeholder="Type here"
+                        <input required name="degreeEnd" type="date" placeholder="Type here"
                             class="text-sm input input-bordered w-full" />
                     </label>
                 </div>
@@ -138,14 +138,14 @@
                     <div class="label">
                         <span class="label-text">Job Title:</span>
                     </div>
-                    <input name="jobTitle" type="text" placeholder="Bachelors of Science in Computer Science"
+                    <input required name="jobTitle" type="text" placeholder="Bachelors of Science in Computer Science"
                         class="text-sm input input-bordered w-full" />
                 </label>
                 <label class="form-control">
                     <div class="label">
                         <span class="label-text">Employer's Name:</span>
                     </div>
-                    <input name="jobInstitute" type="text" placeholder="XYZ Institute, New York, USA"
+                    <input required name="jobInstitute" type="text" placeholder="XYZ Institute, New York, USA"
                         class="text-sm input input-bordered w-full" />
                 </label>
                 <div class="flex gap-2 w-full">
@@ -153,7 +153,7 @@
                         <div class="label">
                             <span class="label-text">Start Date:</span>
                         </div>
-                        <input name="jobStart" type="date" placeholder="Type here"
+                        <input required name="jobStart" type="date" placeholder="Type here"
                             class="text-sm input input-bordered w-full" />
                     </label>
 
@@ -161,7 +161,7 @@
                         <div class="label">
                             <span class="label-text">End Date:</span>
                         </div>
-                        <input name="jobEnd" type="date" placeholder="Type here"
+                        <input required name="jobEnd" type="date" placeholder="Type here"
                             class="text-sm input input-bordered w-full" />
                     </label>
                 </div>
@@ -173,55 +173,55 @@
                 <legend class="text-lg font-semibold uppercase">Skills</legend>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="HTML" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="HTML" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">HTML</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="CSS" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="CSS" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">CSS</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="TailwindCSS" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="TailwindCSS" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">TailwindCSS</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="JavaScript" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="JavaScript" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">JavaScript</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="Python" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="Python" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">Python</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="PHP" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="PHP" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">PHP</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="Next.js" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="Next.js" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">Next.js</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="React.js" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="React.js" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">React.js</span>
                     </label>
                 </div>
                 <div class="form-control">
                     <label class="w-fit flex gap-3 label cursor-pointer">
-                        <input name="skill" value="Node.js" type="checkbox" class="checkbox checkbox-accent" />
+                        <input required name="skill" value="Node.js" type="checkbox" class="checkbox checkbox-accent" />
                         <span class="label-text">Node.js</span>
                     </label>
                 </div>
